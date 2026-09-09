@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forest Focus</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div>
+        <p class="eyebrow">A quiet place to begin</p>
+        <h1>Forest Focus</h1>
+      </div>
+      <div class="controls">
+        <button id="start" class="primary">Start session</button>
+        <button id="stop" class="secondary" hidden>Stop session</button>
+        <a class="settings-link settings-icon" href="./settings.html" aria-label="Settings" title="Settings">&#9881;</a>
+      </div>
+    </header>
+
+    <div class="workspace">
+      <section class="notepad" aria-label="Work area">
+        <div class="paper-lines"></div>
+        <textarea id="notes" aria-label="Your notes" placeholder="Let your thoughts land here..."></textarea>
+      </section>
+      <aside class="support-column">
+        <section id="companion" class="companion" hidden>
+          <img src="" alt="">
+          <span><strong class="companion-name"></strong><small>is quietly with you.</small></span>
+        </section>
+        <section id="check-in" class="message-card" hidden>
+          <p class="message-label">A gentle check-in from <span class="check-in-name"></span></p>
+          <p class="check-in-text"></p>
+          <div class="message-actions">
+            <button data-response="false-alarm">I am in the flow</button>
+            <button data-response="stuck">I’m stuck</button>
+          </div>
+        </section>
+        <section id="companion-reaction" class="message-card reaction" hidden>
+          <p class="message-label">From <span class="reaction-name"></span></p>
+          <p class="reaction-text"></p>
+        </section>
+        <section id="empowerment" class="message-card empowerment" hidden>
+          <p class="message-label">A little encouragement</p>
+          <p class="empowerment-name"></p>
+          <p class="empowerment-text"></p>
+        </section>
+      </aside>
+    </div>
+
+    <p id="status" class="status">Your calm work area is waiting.</p>
+    <div class="actions">
+      <button id="direct-stuck" class="secondary" hidden>I’m stuck</button>
+    </div>
+
+  </main>
+  <script src="./tracker.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
