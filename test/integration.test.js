@@ -18,7 +18,7 @@ function getPage(port, pathname = "/") {
   });
 }
 
-test("starts the server and serves the Forest Focus page", async () => {
+test("starts the server and serves the Fernkin page", async () => {
   const port = 3100 + Math.floor(Math.random() * 500);
   const server = spawn(process.execPath, ["server.js"], {
     cwd: path.join(__dirname, ".."),
@@ -41,7 +41,7 @@ test("starts the server and serves the Forest Focus page", async () => {
 
     const page = await getPage(port);
     assert.equal(page.statusCode, 200);
-    assert.match(page.body, /<title>Forest Focus<\/title>/);
+    assert.match(page.body, /<title>Fernkin<\/title>/);
     assert.match(page.body, /src="\.\/tracker\.js"/);
     assert.match(page.body, /src="\.\/app\.js"/);
   } finally {

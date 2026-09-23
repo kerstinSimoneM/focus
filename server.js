@@ -35,5 +35,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(port, () => {
-  console.log(`Forest Focus is running at http://localhost:${port}`);
+  console.log(`Fernkin is running at http://localhost:${port}`);
 });
